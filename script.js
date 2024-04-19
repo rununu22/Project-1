@@ -1,14 +1,13 @@
-// Javascript to facilitate responsive behaviors. 
-// Example: Toggle navigation for small screens
-const navToggle = document.querySelector('nav ul');
-const navLinks = document.querySelectorAll('nav ul li');
-
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    });
-});
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Get the value of the first name input field
+    var firstName = document.getElementById("firstName").value;
+    
+    // Display the confirmation message with the first name
+    document.getElementById("firstNameDisplay").textContent = firstName;
+    document.getElementById("confirmationMessage").style.display = "block";
+    
+    // Optional: You can reset the form fields after submission
+    document.getElementById("contactForm").reset();
+  });
